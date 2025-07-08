@@ -15,7 +15,9 @@ pipeline{
         stage('Construir imagen'){
             steps{
                 bat "docker build . -t ${DOCKER_IMAGE}"                            
-        }
+            }
+        }
+        
 stage('Limpiar contenedor existente') {
             steps {
                 script {
